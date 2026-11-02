@@ -20,7 +20,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat stockflow-payload/*.b64 > /tmp/stockflow.zip.b64
+          cat stockflow-payload/00.b64 stockflow-payload/01.b64 stockflow-payload/02.b64 stockflow-payload/03.b64 stockflow-payload/04.b64 stockflow-payload/05.b64 stockflow-payload/06full.b64 stockflow-payload/07.b64 > /tmp/stockflow.zip.b64
           base64 --decode /tmp/stockflow.zip.b64 > /tmp/stockflow.zip
           unzip -t /tmp/stockflow.zip
           mkdir -p /tmp/stockflow-source
